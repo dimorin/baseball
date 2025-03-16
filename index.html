@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>야구 게임</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>야구 게임</h1>
+    
+    <div id="game-container" class="hidden">
+      <div id="scoreboard">
+        <h2>스코어보드</h2>
+        <table id="score-table">
+          <thead>
+            <tr>
+              <th>팀</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>R</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="team-a-score">
+              <td>A팀</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr id="team-b-score">
+              <td>B팀</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="game-info">
+        <div id="inning-display">1회 초 공격: A팀</div>
+        <div id="count-display">
+          <span>스트라이크: <span id="strike-count">0</span></span>
+          <span>볼: <span id="ball-count">0</span></span>
+          <span>아웃: <span id="out-count">0</span></span>
+        </div>
+      </div>
+
+      <div id="field-and-batting">
+        <div id="field-display">
+          <h3>수비 현황</h3>
+          <div id="defense-team"></div>
+          <div id="base-status">
+            <div class="base" id="first-base"></div>
+            <div class="base" id="second-base"></div>
+            <div class="base" id="third-base"></div>
+            <div class="base" id="home-base"></div>
+          </div>
+        </div>
+
+        <div id="batting-section">
+          <h3>타격 결과</h3>
+          <div id="batting-result">게임을 시작하세요!</div>
+          <div id="current-batter"></div>
+          <button id="hit-button" class="hidden">타격하기</button>          
+        </div>
+      </div>
+
+      <div id="team-info" class="hidden">
+        <div id="team-a-info">
+          <h3>A팀 선수 명단</h3>
+          <ul id="team-a-players"></ul>
+        </div>
+        <div id="team-b-info">
+          <h3>B팀 선수 명단</h3>
+          <ul id="team-b-players"></ul>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div id="start-screen">
+      <button id="start-button">게임 시작</button>
+    </div>
+
+    <div id="game-over" class="hidden">
+      <h2>게임 종료</h2>
+      <div id="final-score"></div>
+      <button id="replay-button">다시 하기</button>
+    </div>
+  </div>
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html> 
